@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI GuardTower</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'gray-900': '#121212',
+              'gray-800': '#1e1e1e',
+              'gray-700': '#2d2d2d',
+              'gray-600': '#3c3c3c',
+              'gray-500': '#5a5a5a',
+              'gray-400': '#9e9e9e',
+              'gray-300': '#e0e0e0',
+              'blue-500': '#3b82f6',
+              'blue-600': '#2563eb',
+              'green-500': '#22c55e',
+              'yellow-500': '#eab308',
+              'red-500': '#ef4444',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Added for Data Lineage page animations */
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      .animate-draw {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 1.5s 0.3s ease-out forwards;
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+        opacity: 0;
+      }
+      
+      @keyframes glow {
+        0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
+        50% { box-shadow: 0 0 16px rgba(239, 68, 68, 0.8); }
+      }
+      .untrusted-glow {
+        animation: glow 2s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0",
+    "recharts": "https://esm.sh/recharts@^3.1.0",
+    "dexie": "https://esm.sh/dexie@^4.0.7"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 dark:bg-gray-800">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

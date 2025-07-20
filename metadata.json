@@ -1,0 +1,6 @@
+{
+  "name": "Copy of AI GuardTower - Cybersecurity Suite for AI (new) - working endpoint",
+  "description": "A comprehensive suite of cybersecurity tools designed to help developers secure their AI/ML applications. Features include an API gateway, prompt injection firewall, sensitive data detection, usage analytics, adversarial testing, and more.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
