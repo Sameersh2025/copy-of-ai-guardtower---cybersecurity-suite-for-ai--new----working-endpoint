@@ -1,0 +1,17 @@
+Thought for 19 seconds
+chevron_right
+This project, AI GuardTower, is a comprehensive, web-based cybersecurity suite designed to help developers secure their AI and ML applications. It functions as a sophisticated Security Operations Center (SOC) for AI models, built as a React single-page application that intelligently leverages the Google Gemini API for its core features.
+
+Here is a summary of its key functionalities:
+
+API Security Gateway: Allows users to register, monitor, and manage their AI model endpoints. It tracks status, rate limits, IP whitelists, and calculates a dynamic "Health Score" for each endpoint.
+AI-Powered Threat Intelligence:
+Prompt Injection Firewall: Analyzes prompts in real-time to detect and log threats like prompt injection and jailbreaking attempts.
+Sensitive Data Detector: Scans data streams to identify and log the exposure of PII (e.g., emails, SSNs), redacting sensitive information in the UI.
+Adversarial Testing: Provides a sandbox environment where developers can test their endpoints with potentially malicious prompts. It uses the Gemini API to analyze the model's response, assess the vulnerability, and provide a detailed risk report with actionable recommendations.
+Data Lineage & Provenance: Features a powerful visualization tool that maps the entire data pipeline for an AI model. It tracks data from its original sources (rating them as 'Trusted', 'Untrusted', or 'Unverified'), through processing steps, to the final deployed model, providing a clear chain of custody for auditing and trust.
+Reporting & Compliance: Generates in-depth security reports for any endpoint. It uses the Gemini API to create an executive-level summary of the report, alongside detailed metrics on threats, uptime, and latency.
+Advanced User Experience:
+Natural Language Search: Users can search through all security logs using plain English queries (e.g., "critical incidents from the last 24 hours"), which are parsed by the Gemini API into structured filters.
+Role-Based Access Control (RBAC): Implements a user management system with different roles (Admin, Developer, Viewer) to control access to sensitive features.
+Offline Capability: Utilizes a local IndexedDB database (via Dexie.js) to persist all data, ensuring the application is responsive and functional even when offline.
